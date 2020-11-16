@@ -36,7 +36,7 @@ import { baseUrl } from './library/config.js';
 
                     template += `<li class="item">
                     <div class="p-box">
-                        <input type="checkbox" id="p1">
+                        <input type="checkbox" id="p1" class="checksin"> 
                     </div>
                     <div class="p-img">
                         <img src="../img/${picture[0].src}" alt="">
@@ -61,7 +61,6 @@ import { baseUrl } from './library/config.js';
 
 
                 $('.itemlist').append(template);
-                
             }
         });
     }

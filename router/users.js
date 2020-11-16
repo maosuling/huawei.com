@@ -22,12 +22,12 @@ router.route('/reg')
     .post((req, res, next) => {
         // 判断用户名是否存在
 
-        let searchUser = `select * from users where user_name='${req.body.username}'`;
+        let searchUser = `select * from users where user_phone='${req.body.phone}'`;
 
         conn.query(searchUser, (err, results) => {
             if (err) console.log(err);
             if (results.length) {
-                res.json({ msg: '用户名已存在', username: req.body.username, error: 1 });
+                res.json({ msg: '用户名已存在', phone: req.body.phone, error: 1 });
             } else {
                 let md5 = crypto.createHash('md5'); // 创建一个哈希加密
                 let passResult = md5.update(req.body.password).digest('hex'); // 加密内容获得16进制结果
@@ -39,11 +39,11 @@ router.route('/reg')
                 conn.query(sql, (err, result) => {
                     if (err) console.log(err);
                     if (result.insertId) {
-                        res.cookie('username', req.body.username);
+                        res.cookie('phone', req.body.phone);
                         res.cookie('isLogined', true);
                         res.json({
                             msg: "注册成功",
-                            username: req.body.username,
+                            phone: req.body.phone,
                             error: 0
                         });
                     }

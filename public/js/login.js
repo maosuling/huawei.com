@@ -4,11 +4,12 @@ import cookie from './library/cookie.js';
 
 $('#submit').on('click', function() {
     // 省略1万字的表单验证环节
-    alert('注册成功');
+    alert('登录成功');
+    // let pass = /.\{6-16}/;
     let password = $.md5($('[name=password]').val());
     $.ajax({
         type: "post",
-        url: "http://10.31.162.53:8888/users/reg",
+        url: "http://10.31.162.53:8888/users/login",
         data: {
             username: $('[name=username]').val(),
             password: password,

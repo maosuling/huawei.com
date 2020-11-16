@@ -3,6 +3,7 @@
   position: fixed;
   top: 25%;
   right: 2px;
+  display: none;
 }
 #list-list > li {
   text-align: right;

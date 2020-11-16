@@ -183,7 +183,7 @@ import glass from './library/glass.js';
             <div class="content clearfix">
                 <div class="left left1"> 
                     <div class="smallfdj">
-                        <img src="../img/${picture[0].src}" alt="">
+                        <img src="../img/${picture[0].src}" alt="" class="smallfdj2">
                         <div class="hide movebox"></div>
                     </div>
                     <div class="smalltp clearfix">
