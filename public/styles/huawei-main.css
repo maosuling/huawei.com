@@ -1,4 +1,21 @@
 /* main start to css */
+#list-list {
+  position: fixed;
+  top: 25%;
+  right: 2px;
+}
+#list-list > li {
+  text-align: right;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#list-list > li > a {
+  color: gainsboro;
+}
+#list-list > li > a.active {
+  color: black;
+  border-right: 2px solid red;
+}
 #mian {
   margin-top: -50px;
 }
@@ -308,7 +325,6 @@
 .four-main {
   width: 1200px;
   margin: 30px auto 0 auto;
-  position: relative;
   text-align: center;
 }
 .four-main > h2 {
@@ -316,39 +332,47 @@
   height: 45px;
   line-height: 45px;
 }
-.four-main > .prev2 {
-  display: inline-block;
-  width: 40px;
-  height: 70px;
-  line-height: 70px;
-  font-size: 18px;
-  position: absolute;
-  top: 1.2%;
-  left: 0;
-  background: gainsboro;
-  cursor: pointer;
-  border-radius: 0 5px 5px 0;
-}
-.four-main > .next2 {
-  display: inline-block;
-  width: 40px;
-  height: 70px;
-  line-height: 70px;
-  font-size: 18px;
-  position: absolute;
-  top: 1.2%;
-  left: 1160px;
-  background: gainsboro;
-  cursor: pointer;
-  border-radius: 5px 0 0 5px;
-}
 .four-main > .slider5 {
   width: 1200px;
   height: 290px;
   overflow: hidden;
   margin: 0 auto;
+  position: relative;
 }
-.four-main > .slider5 .slider4 > a {
+.four-main > .slider5 > .prev2 {
+  display: inline-block;
+  width: 40px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 18px;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  background: gainsboro;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  z-index: 11111111;
+}
+.four-main > .slider5 > .next2 {
+  display: inline-block;
+  width: 40px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 18px;
+  position: absolute;
+  top: 25%;
+  left: 1160px;
+  background: gainsboro;
+  cursor: pointer;
+  border-radius: 5px 0 0 5px;
+  z-index: 111111111;
+}
+.four-main > .slider5 > .slider4 {
+  width: 4800px;
+  position: absolute;
+  left: 0;
+}
+.four-main > .slider5 > .slider4 > a {
   display: block;
   float: left;
   width: 230px;

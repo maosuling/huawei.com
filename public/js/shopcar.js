@@ -61,7 +61,7 @@ import { baseUrl } from './library/config.js';
 
 
                 $('.itemlist').append(template);
-
+                
             }
         });
     }

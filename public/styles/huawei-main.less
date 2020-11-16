@@ -1,4 +1,26 @@
 /* main start to css */
+#list-list{
+    position: fixed;
+    top: 25%;
+    right: 2px;
+    // display: none;
+
+    >li{
+        text-align: right;
+        padding: 10px;
+        box-sizing: border-box;
+
+        >a{
+            color:gainsboro;
+          
+        }
+
+        >a.active{
+            color:black;
+            border-right: 2px solid red;
+        }
+    }
+}
 #mian{
     margin-top: -50px;
 }
@@ -330,7 +352,6 @@
 .four-main{
     width: 1200px;
     margin:30px auto 0 auto;
-    position: relative;
     text-align: center;
 
     >h2{
@@ -339,44 +360,47 @@
         line-height: 45px;
     }
 
-    >.prev2{
-        display: inline-block;
-        width: 40px;
-        height: 70px;
-        line-height: 70px;
-        font-size: 18px;
-        position: absolute;
-        top:1.2%;
-        left:0;
-        background:gainsboro;
-        cursor: pointer;
-        border-radius: 0 5px 5px 0;
-    }
-
-    >.next2{
-        display: inline-block;
-        width: 40px;
-        height: 70px;
-        line-height: 70px;
-        font-size: 18px;
-        position: absolute;
-        top:1.2%;
-        left:1160px;
-        background:gainsboro; 
-        cursor: pointer;
-        border-radius: 5px 0 0 5px;
-    }
-
     >.slider5{
         width: 1200px;
         height: 290px;
         overflow: hidden;
         margin: 0 auto;
+        position: relative;
 
-        .slider4{
-            // width: 1220px;
-            // height: 290px;
-            // overflow: hidden;
+        >.prev2{
+            display: inline-block;
+            width: 40px;
+            height: 70px;
+            line-height: 70px;
+            font-size: 18px;
+            position: absolute;
+            top:25%;
+            left:0;
+            background:gainsboro;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+            z-index: 11111111;
+        }
+    
+        >.next2{
+            display: inline-block;
+            width: 40px;
+            height: 70px;
+            line-height: 70px;
+            font-size: 18px;
+            position: absolute;
+            top:25%;
+            left:1160px;
+            background:gainsboro; 
+            cursor: pointer;
+            border-radius: 5px 0 0 5px;
+            z-index: 111111111;
+        }
+
+        >.slider4{
+            width: 4800px;
+            position: absolute;
+            left: 0;
             >a{
                 display: block;
                 float: left;
@@ -661,4 +685,5 @@
     display: block;
     
 }
+
 /* main end to css */

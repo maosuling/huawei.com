@@ -2,7 +2,6 @@ import './library/jquery.js';
 import './library/jquery.lazyload.min.js';
 import banner1 from './library/banner1.js';
 import banner2 from './library/banner2.js';
-// import banner4 from './library/banner3.js';
 import { baseUrl } from './library/config.js';
 
 (function() {
@@ -37,8 +36,11 @@ import { baseUrl } from './library/config.js';
             });
 
             $('.list').append(tempLi);
+
+            //懒加载
             $(".lazy").lazyload({effect: "fadeIn"});
 
+            //轮播图1
             const banner = $('.slider');
             const picLi = $('.idx-banner .banner-box img');
             const btnLi = $('.idx-banner .page span');
@@ -46,19 +48,35 @@ import { baseUrl } from './library/config.js';
             const rightArrow = $('.next');
             banner1(banner, picLi, btnLi,rightArrow,leftArrow);
 
+            //轮播图2
             const banner3 = $('.slider3');
             const picLi3 = $('.idx-banner .banner-box2 img');
             const btnLi3 = $('.idx-banner .page2 span');
             banner2(banner3, picLi3, btnLi3);
 
-            // const rightArrow1 = $('.prev2');
-            // const leftArrow1 = $('.next2');
-            // banner4(rightArrow1, leftArrow1)
+            //轮播图3
             $('.prev2').on('click',function(){
-                $('.slider5').css('left','-1200px');
+                $('.slider4').css('left','-=1200px');
             });
             $('.next2').on('click',function(){
-                $('.slider5').css('left','1200px');
+                $('.slider4').css('left','+=1200px');
+            });
+
+            //滚轮事件
+            $('#list-list>li>a').on('click', function() {
+                let top = $(`#${$(this).attr('title')}`).offset().top;
+                $('html').animate({
+                    scrollTop: top
+                }, 600);
+            });
+
+            $(window).on('scroll', function() {
+                let num = '2133';
+                let top = $(document).scrollTop();
+                console.log(top);
+
+                let index = Math.round((top-num)/1000);
+                $('#list-list>li>a').removeClass('active').eq(index).addClass('active');
             });
         }
     });

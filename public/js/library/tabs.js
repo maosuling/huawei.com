@@ -1,5 +1,6 @@
 // const btns = $('.links .tabBtn');
 // const boxs = $('.set-meal-ajax .box');
+import 
 function tabs(btns,boxs){
     btns.on('mouseover', function() {
         let i = btns.index(this);

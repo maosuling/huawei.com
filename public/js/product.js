@@ -248,7 +248,7 @@ import glass from './library/glass.js';
                     <div class="gwc p-num">
                         购买数量:<input type="number" value="1" min="1" max="${res.num}" id="num" class="input1">
                         <span>库存数量:${res.num}</span>
-                        <span id="additem">加入购物车</span>
+                        <a href="../html/shopcar.html" id="additem"><span>加入购物车</span></a>
                         <span>立即下单</span>
                     </div>
                 </div>
@@ -391,8 +391,8 @@ import glass from './library/glass.js';
             const bigpic = $('.bigpic');
             const small = $('.smallfdj');
             const big = $('.bigfdj');
-
             glass(movebox,bigpic,small,big);
+            
         }
     });
 
